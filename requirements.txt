@@ -1,0 +1,6 @@
+# bot.py hanya butuh Python 3.9+ standard library (tanpa paket tambahan).
+# Paket di bawah hanya untuk folder backtest/:
+requests>=2.28
+pandas>=1.5
+numpy>=1.23
+matplotlib>=3.6

@@ -1,0 +1,18 @@
+# Salin ke /etc/systemd/system/ema5bot.service, sesuaikan User & path, lalu:
+#   sudo systemctl daemon-reload && sudo systemctl enable --now ema5bot
+#   journalctl -u ema5bot -f
+[Unit]
+Description=EMA5 top-curl SHORT 1H alert bot (alert-only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/ema5-top-curl-short-bot
+ExecStart=/usr/bin/python3 -u bot.py
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target

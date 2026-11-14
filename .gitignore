@@ -1,0 +1,16 @@
+.env
+*.env
+state.json
+state.json.tmp
+__pycache__/
+*.pyc
+backtest/data/
+*.pkl
+backtest/*_results.csv
+!backtest/mtf_top_with_baseline_results.csv
+backtest/results_all_variants.csv
+backtest/mtf_results.csv
+backtest/ema_top_results.csv
+*.log
+venv/
+.venv/
